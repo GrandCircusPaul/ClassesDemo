@@ -10,7 +10,9 @@ namespace ClassesDemo
     {
         static void Main(string[] args)
         {
-            Box myBox = new Box();
+            Box myBox = new Box(3, 3);
+            Box myBox2 = new Box(3, 3, 3);
+            Box myBox3 = new Box(3, 3, 3, true);
             Box myBox4 = new Box();
             Box myBox5 = new Box();
             Box myBox6 = new Box();
@@ -55,6 +57,37 @@ namespace ClassesDemo
             this.length = 1;
             this.width = 2;
             this.height = 3;
+            this.full = false;
+
+            Console.WriteLine("Created Box Number " + boxCount);
+        }
+
+        public Box(int _length, int _width, int _height, bool _full) // An OVERLOADED CONSTRUCTOR
+        {
+            boxCount++;
+            this.length = _length;
+            this.width = _width;
+            this.height = _height;
+            this.full = _full;
+
+            Console.WriteLine("Created Box Number " + boxCount);
+        }
+        public Box(int _length, int _width)//, int _height) // An OVERLOADED CONSTRUCTOR
+        {
+            boxCount++;
+            this.length = _length;
+            this.width = _width;
+            //            this.height = _height;
+            this.full = false;
+
+            Console.WriteLine("Created Box Number " + boxCount);
+        }
+        public Box(int _length, int _width, int _height) // An OVERLOADED CONSTRUCTOR
+        {
+            boxCount++;
+            this.length = _length;
+            this.width = _width;
+            this.height = _height;
             this.full = false;
 
             Console.WriteLine("Created Box Number " + boxCount);
